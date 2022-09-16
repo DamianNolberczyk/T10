@@ -82,8 +82,8 @@ public class Main {
 			default:
 			}
 			
-		} catch (Exception e) {
-			 System.out.print(e);
+		} catch (Exception numbreFormatException) {
+			 System.out.print(numbreFormatException);
 		}
 
 	}
