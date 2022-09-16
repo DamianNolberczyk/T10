@@ -1,5 +1,6 @@
 package t10_4;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -80,12 +81,21 @@ public class Main {
 				break;
 			}
 			default:
+				if (selecion > 7) {
+					System.out.println("ERROR! Opcion invalida");
+				}
+				System.out.println("Salir");
 			}
 			
-		} catch (Exception numbreFormatException) {
-			 System.out.print(numbreFormatException);
+		} catch (InputMismatchException a) {
+			 System.out.print(a);
+		} catch (ArithmeticException e) {
+			 System.out.print(e);
+		} catch (NumberFormatException n) {
+			 System.out.print(n);
 		}
-
+		
+		teclado.close();
 	}
 
 }
